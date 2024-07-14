@@ -31,11 +31,12 @@ function Filters({ setFilters }) {
     return (
         <>
             {!error ? (
-                <div>
+                <div className="border p-2">
                     <StringFilters setNameSend={setNameParent} setSpeciesSend={setSpeciesParent} setTypeSend={setTypeParent} />
                     <GenderFilter setGenderSend={setGenderParent} />
                     <StatusFilter setStatusSend={setStatusParent} />
-                    <button className="btn btn-primary mt-3" onClick={handleSendFilters}>
+                    <hr />
+                    <button className="btn btn-primary" onClick={handleSendFilters}>
                         Send Filters
                     </button>
                 </div>
