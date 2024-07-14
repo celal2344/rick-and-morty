@@ -1,33 +1,22 @@
-import { useEffect, useState } from "react";
-
 function StringFilters({ setNameSend, setSpeciesSend, setTypeSend }) {
-    const [name, setName] = useState("");
-    const [species, setSpecies] = useState("");
-    const [type, setType] = useState("");
-
-    useEffect(() => {
-        setNameSend(name);
-        setSpeciesSend(species);
-        setTypeSend(type);
-    }, [name, species, type]);
-
+    //This component receives the functions to send the values of the inputs to the Filters component
     return (
         <div>
             {
                 <>
                     <form>
                         <div className="form-group">
-                            <input type="text" className="form-control" id="name-input" aria-describedby="nameHelp" placeholder="Enter name" onChange={(event) => setName(event.target.value)}></input>
+                            <input type="text" className="form-control" id="name-input" aria-describedby="nameHelp" placeholder="Enter name" onChange={(event) => setNameSend(event.target.value)}></input>
                         </div>
                     </form>
                     <form>
                         <div className="form-group">
-                            <input type="text" className="form-control" id="species-input" aria-describedby="speciesHelp" placeholder="Enter species" onChange={(event) => setSpecies(event.target.value)}></input>
+                            <input type="text" className="form-control" id="species-input" aria-describedby="speciesHelp" placeholder="Enter species" onChange={(event) => setSpeciesSend(event.target.value)}></input>
                         </div>
                     </form>
                     <form>
                         <div className="form-group">
-                            <input type="text" className="form-control" id="type-input" aria-describedby="typeHelp" placeholder="Enter type" onChange={(event) => setType(event.target.value)}></input>
+                            <input type="text" className="form-control" id="type-input" aria-describedby="typeHelp" placeholder="Enter type" onChange={(event) => setTypeSend(event.target.value)}></input>
                         </div>
                     </form>
                 </>
@@ -35,5 +24,4 @@ function StringFilters({ setNameSend, setSpeciesSend, setTypeSend }) {
         </div >
     )
 }
-
 export default StringFilters
