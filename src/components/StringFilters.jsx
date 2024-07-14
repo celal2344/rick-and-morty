@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 
 function StringFilters({ setNameSend, setSpeciesSend, setTypeSend }) {
-    const [error, setError] = useState(null);
     const [name, setName] = useState("");
     const [species, setSpecies] = useState("");
     const [type, setType] = useState("");
@@ -14,7 +13,7 @@ function StringFilters({ setNameSend, setSpeciesSend, setTypeSend }) {
 
     return (
         <div>
-            {!error ? (
+            {
                 <>
                     <form>
                         <div className="form-group">
@@ -32,9 +31,6 @@ function StringFilters({ setNameSend, setSpeciesSend, setTypeSend }) {
                         </div>
                     </form>
                 </>
-            ) : (
-                <p className="error-message">{error}</p>
-            )
             }
         </div >
     )

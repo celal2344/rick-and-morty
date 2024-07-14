@@ -8,6 +8,7 @@ import 'bootstrap-table/dist/bootstrap-table.min.css';
 
 function App() {
   const [filters, setFilters] = useState("");
+  //App consists of 2 components: Filters and Table which can communicate filters with each other
   return (
     <div className='container'>
       <div className='row'>
